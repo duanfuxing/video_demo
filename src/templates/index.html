@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频文字编辑器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .note {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+        }
+        .counter {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .loading-spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #4CAF50;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>视频文字编辑器</h1>
+        <form id="videoForm" action="/process" method="post">
+            <div class="form-group">
+                <label for="typewriter_text">打字机效果文字</label>
+                <input type="text" id="typewriter_text" name="typewriter_text" required>
+                <div class="note">这段文字将以打字机效果显示在视频顶部</div>
+            </div>
+            <div class="form-group">
+                <label for="static_text1">静态文字 1</label>
+                <input type="text" id="static_text1" name="static_text1" required>
+            </div>
+            <div class="form-group">
+                <label for="static_text2">静态文字 2</label>
+                <input type="text" id="static_text2" name="static_text2" required>
+            </div>
+            <div class="form-group">
+                <label for="static_text3">静态文字 3</label>
+                <input type="text" id="static_text3" name="static_text3" required>
+            </div>
+            <div class="form-group">
+                <label for="template_id">选择视频模板</label>
+                <select id="template_id" name="template_id" required>
+                    <!-- 选项将通过JavaScript动态加载 -->
+                </select>
+            </div>
+            <button type="submit" id="submitBtn">生成视频</button>
+        </form>
+        <div class="counter">已合成视频次数：<span id="renderCount">0</span></div>
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>视频生成中，请稍候...</p>
+        </div>
+        <div id="result">
+            <div id="downloadLink"></div>
+        </div>
+    </div>
+    <script>
+        // 页面加载时获取视频模板列表
+        fetch('/templates')
+            .then(response => response.json())
+            .then(templates => {
+                const select = document.getElementById('template_id');
+                templates.forEach(template => {
+                    const option = document.createElement('option');
+                    option.value = template.id;
+                    option.textContent = template.name;
+                    select.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error:', error));
+    
+        document.getElementById('videoForm').onsubmit = function(e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingDiv = document.getElementById('loading');
+            const resultDiv = document.getElementById('result');
+            
+            // 显示加载动画，隐藏其他元素
+            submitBtn.disabled = true;
+            loadingDiv.style.display = 'block';
+            resultDiv.style.display = 'none';
+            // 在加载状态下不隐藏计数器
+            
+            fetch('/process', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const downloadDiv = document.getElementById('downloadLink');
+                const renderCountSpan = document.getElementById('renderCount');
+                
+                downloadDiv.innerHTML = `<a href="${data.video_url}" class="button">下载生成的视频</a>`;
+                renderCountSpan.textContent = data.render_count;
+                
+                // 隐藏加载动画，显示结果
+                loadingDiv.style.display = 'none';
+                resultDiv.style.display = 'block';
+                submitBtn.disabled = false;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('生成视频时出错，请重试');
+                loadingDiv.style.display = 'none';
+                submitBtn.disabled = false;
+            });
+        };
+    </script>
+</body>
+</html>

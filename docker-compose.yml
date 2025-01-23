@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  video-editor:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./asset/video:/app/asset/video
+      - ./output:/app/output
+      - ./src/data:/app/src/data
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+    restart: unless-stopped
