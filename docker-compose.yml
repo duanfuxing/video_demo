@@ -9,6 +9,7 @@ services:
       - ./asset/video:/app/asset/video
       - ./output:/app/output
       - ./src/data:/app/src/data
+      - ./src/log:/app/src/log
       - ./app.py:/app/app.py
     environment:
       - FLASK_APP=app.py
