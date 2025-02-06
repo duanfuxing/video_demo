@@ -8,6 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # 安装Python依赖
+RUN pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # 安装系统依赖和字体

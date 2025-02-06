@@ -2,20 +2,11 @@ version: '3.8'
 
 services:
   video-editor:
-    build: 
-      context: .
-      args:
-        - HTTP_PROXY=${HTTP_PROXY}
-        - HTTPS_PROXY=${HTTPS_PROXY}
-    #image: catchoco/video_demo:v1.0
+    image: catchoco/video_demo:v1.0
     ports:
       - "5000:5000"
     volumes:
-      - ./asset/video:/app/asset/video
-      - ./output:/app/output
-      - ./src/data:/app/src/data
-      - ./src/log:/app/src/log
-      - ./app.py:/app/app.py
+      - ./:/app/
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=production
