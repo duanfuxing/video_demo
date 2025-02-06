@@ -19,11 +19,19 @@ RUN apt-get update && apt-get install -y \
 # 创建必要的目录
 RUN mkdir -p asset/video asset/audio asset/font asset/images output src/data
 
+# 设置目录权限
+RUN chown -R www-data:www-data /app && \
+    chmod -R 755 /app && \
+    chmod -R 777 /app/output /app/src/data
+
 # 复制项目文件
 COPY . .
 
 # 设置环境变量
 ENV PYTHONPATH=/app
+
+# 切换到非root用户
+USER www-data
 
 # 暴露端口
 EXPOSE 5000
