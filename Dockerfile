@@ -17,6 +17,13 @@ RUN apt-get update && apt-get install -y \
     fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
 
+# 检查并修改www-data用户的UID和GID为1000
+RUN if id "www-data" &>/dev/null; then \
+      groupmod -g 1000 www-data && usermod -u 1000 -g 1000 www-data; \
+    else \
+      groupadd -g 1000 www-data && useradd -u 1000 -g www-data -m www-data; \
+    fi
+
 # 创建必要的目录
 RUN mkdir -p asset/video asset/audio asset/font asset/images output src/data src/log
 
