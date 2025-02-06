@@ -1,0 +1,270 @@
+2025-02-06 11:37:04,200 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:37:05,207 - video_editor - INFO - 开始渲染视频到: output/video_1_1738813025_8325.mp4
+2025-02-06 11:37:05,207 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 11:37:05,207 - video_editor - INFO - 使用原始视频时长
+2025-02-06 11:37:05,257 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 11:37:31,434 - video_editor - INFO - 视频渲染完成
+2025-02-06 11:46:39,608 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:47:36,311 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:48:55,333 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:49:31,115 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:49:40,499 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:51:05,988 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:52:11,342 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:52:14,506 - video_editor - INFO - 开始渲染视频到: output/video_3_1738813934_5560.mp4
+2025-02-06 11:52:14,506 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 11:52:14,506 - video_editor - INFO - 使用原始视频时长
+2025-02-06 11:52:14,555 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 11:55:54,039 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:55:54,896 - video_editor - INFO - 开始渲染视频到: output/video_2_1738814154_8025.mp4
+2025-02-06 11:55:54,896 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 11:55:54,896 - video_editor - INFO - 使用原始视频时长
+2025-02-06 11:55:54,939 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 11:56:19,438 - video_editor - INFO - 视频渲染完成
+2025-02-06 11:57:49,243 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:58:27,043 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 11:58:28,027 - video_editor - INFO - 开始渲染视频到: output/video_1_1738814308_4804.mp4
+2025-02-06 11:58:28,027 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 11:58:28,027 - video_editor - INFO - 使用原始视频时长
+2025-02-06 11:58:28,072 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 11:58:51,768 - video_editor - INFO - 视频渲染完成
+2025-02-06 12:00:06,660 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 12:00:07,520 - video_editor - INFO - 开始渲染视频到: output/video_1_1738814407_3295.mp4
+2025-02-06 12:00:07,520 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 12:00:07,521 - video_editor - INFO - 使用原始视频时长
+2025-02-06 12:00:07,565 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 12:00:31,415 - video_editor - INFO - 视频渲染完成
+2025-02-06 12:02:19,211 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 12:02:20,055 - video_editor - INFO - 开始渲染视频到: output/video_1_1738814540_6577.mp4
+2025-02-06 12:02:20,055 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 12:02:20,055 - video_editor - INFO - 使用原始视频时长
+2025-02-06 12:02:20,096 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 12:02:43,734 - video_editor - INFO - 视频渲染完成
+2025-02-06 12:55:24,976 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 12:55:25,880 - video_editor - INFO - 开始渲染视频到: output/video_3_1738817725_5760.mp4
+2025-02-06 12:55:25,880 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 12:55:25,880 - video_editor - INFO - 使用原始视频时长
+2025-02-06 12:55:25,924 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 12:55:50,225 - video_editor - INFO - 视频渲染完成
+2025-02-06 12:59:16,534 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 12:59:17,616 - video_editor - INFO - 开始渲染视频到: output/video_3_1738817957_1060.mp4
+2025-02-06 12:59:17,617 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 12:59:17,617 - video_editor - INFO - 使用原始视频时长
+2025-02-06 12:59:17,665 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 12:59:40,030 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:02:19,834 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:02:20,872 - video_editor - INFO - 开始渲染视频到: output/video_3_1738818140_8892.mp4
+2025-02-06 13:02:20,872 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:02:20,872 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:02:20,920 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:02:45,774 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:03:02,383 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:03:03,253 - video_editor - INFO - 开始渲染视频到: output/video_2_1738818183_7595.mp4
+2025-02-06 13:03:03,254 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:03:03,254 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:03:03,298 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:03:28,035 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:07:26,631 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:07:27,597 - video_editor - INFO - 开始渲染视频到: output/video_3_1738818447_4102.mp4
+2025-02-06 13:07:27,597 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:07:27,597 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:07:27,646 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:07:53,157 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:09:14,336 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:09:15,311 - video_editor - INFO - 开始渲染视频到: output/video_4_1738818555_3058.mp4
+2025-02-06 13:09:15,311 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:09:15,311 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:09:15,358 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:09:39,427 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:11:17,309 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:11:18,333 - video_editor - INFO - 开始渲染视频到: output/video_4_1738818678_5467.mp4
+2025-02-06 13:11:18,333 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:11:18,333 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:11:18,376 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:11:42,798 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:12:19,263 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:12:20,198 - video_editor - INFO - 开始渲染视频到: output/video_4_1738818740_2647.mp4
+2025-02-06 13:12:20,198 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:12:20,198 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:12:20,241 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:12:43,781 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:13:13,233 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:13:14,175 - video_editor - INFO - 开始渲染视频到: output/video_3_1738818794_4369.mp4
+2025-02-06 13:13:14,175 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:13:14,175 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:13:14,221 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:13:38,475 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:17:07,078 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:17:08,086 - video_editor - INFO - 开始渲染视频到: output/video_2_1738819028_7202.mp4
+2025-02-06 13:17:08,086 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:17:08,086 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:17:08,151 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:17:32,568 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:18:16,717 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:18:17,715 - video_editor - INFO - 开始渲染视频到: output/video_2_1738819097_6484.mp4
+2025-02-06 13:18:17,715 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:18:17,715 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:18:17,762 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:18:43,861 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:19:38,089 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:19:39,117 - video_editor - INFO - 开始渲染视频到: output/video_3_1738819179_6494.mp4
+2025-02-06 13:19:39,117 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:19:39,117 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:19:39,162 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:20:05,017 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:22:35,272 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:22:36,235 - video_editor - INFO - 开始渲染视频到: output/video_3_1738819356_1892.mp4
+2025-02-06 13:22:36,235 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:22:36,235 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:22:36,285 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:23:01,799 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:24:11,909 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:24:12,864 - video_editor - INFO - 开始渲染视频到: output/video_4_1738819452_7824.mp4
+2025-02-06 13:24:12,864 - video_editor - DEBUG - 计算的视频总时长: 5.0秒
+2025-02-06 13:24:12,864 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:24:12,916 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:24:37,904 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:25:50,198 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:25:51,121 - video_editor - INFO - 开始渲染视频到: output/video_3_1738819551_5056.mp4
+2025-02-06 13:25:51,121 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:25:51,121 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:25:51,166 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:26:18,174 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:27:16,251 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:27:17,270 - video_editor - INFO - 开始渲染视频到: output/video_4_1738819637_4652.mp4
+2025-02-06 13:27:17,270 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:27:17,270 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:27:17,316 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:27:44,781 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:28:58,039 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:28:59,003 - video_editor - INFO - 开始渲染视频到: output/video_3_1738819739_3817.mp4
+2025-02-06 13:28:59,003 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:28:59,003 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:28:59,045 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:29:25,919 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:30:52,746 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:30:53,709 - video_editor - INFO - 开始渲染视频到: output/video_4_1738819853_2431.mp4
+2025-02-06 13:30:53,709 - video_editor - DEBUG - 计算的视频总时长: 5.03秒
+2025-02-06 13:30:53,709 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:30:53,756 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:31:21,101 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:41:45,161 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:43:07,929 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:43:09,100 - video_editor - INFO - 开始渲染视频到: output/video_3_1738820589_8599.mp4
+2025-02-06 13:43:09,100 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:43:09,100 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:43:09,154 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:44:05,698 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:45:04,721 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:45:05,819 - video_editor - INFO - 开始渲染视频到: output/video_4_1738820705_6218.mp4
+2025-02-06 13:45:05,819 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:45:05,819 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:45:05,876 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:46:05,008 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:47:44,244 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:47:45,349 - video_editor - INFO - 开始渲染视频到: output/video_4_1738820865_5827.mp4
+2025-02-06 13:47:45,349 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:47:45,350 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:47:45,409 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:49:23,712 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:49:24,843 - video_editor - INFO - 开始渲染视频到: output/video_3_1738820964_5823.mp4
+2025-02-06 13:49:24,843 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:49:24,843 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:49:24,901 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:50:25,133 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:51:05,171 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:51:06,287 - video_editor - INFO - 开始渲染视频到: output/video_3_1738821066_5632.mp4
+2025-02-06 13:51:06,287 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:51:06,287 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:51:06,344 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:52:06,727 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:54:02,659 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:54:03,991 - video_editor - INFO - 开始渲染视频到: output/video_4_1738821243_9142.mp4
+2025-02-06 13:54:03,991 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:54:03,991 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:54:04,047 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:55:16,386 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:55:56,082 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:55:57,261 - video_editor - INFO - 开始渲染视频到: output/video_4_1738821357_7679.mp4
+2025-02-06 13:55:57,261 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:55:57,261 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:55:57,317 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:56:53,509 - video_editor - INFO - 视频渲染完成
+2025-02-06 13:57:52,320 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 13:57:53,399 - video_editor - INFO - 开始渲染视频到: output/video_4_1738821473_7828.mp4
+2025-02-06 13:57:53,399 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 13:57:53,399 - video_editor - INFO - 使用原始视频时长
+2025-02-06 13:57:53,456 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 13:58:50,371 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:03:43,424 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:03:44,769 - video_editor - INFO - 开始渲染视频到: output/video_3_1738821824_3772.mp4
+2025-02-06 14:03:44,770 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:03:44,770 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:03:44,892 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:04:49,695 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:06:26,099 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:06:27,089 - video_editor - INFO - 开始渲染视频到: output/video_3_1738821987_5177.mp4
+2025-02-06 14:06:27,090 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:06:27,090 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:06:27,132 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:07:23,817 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:10:41,126 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:10:42,392 - video_editor - INFO - 开始渲染视频到: output/video_2_1738822242_1456.mp4
+2025-02-06 14:10:42,392 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:10:42,392 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:10:42,495 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:11:44,619 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:13:11,116 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:13:12,411 - video_editor - INFO - 开始渲染视频到: output/video_4_1738822392_6648.mp4
+2025-02-06 14:13:12,412 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:13:12,412 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:13:12,479 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:14:12,596 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:15:16,190 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:15:17,390 - video_editor - INFO - 开始渲染视频到: output/video_3_1738822517_7870.mp4
+2025-02-06 14:15:17,390 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:15:17,390 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:15:17,452 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:16:28,282 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:16:58,355 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:16:59,383 - video_editor - INFO - 开始渲染视频到: output/video_3_1738822619_2696.mp4
+2025-02-06 14:16:59,383 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:16:59,383 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:16:59,433 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:18:08,484 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:20:36,550 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:20:37,557 - video_editor - INFO - 开始渲染视频到: output/video_3_1738822837_1724.mp4
+2025-02-06 14:20:37,557 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:20:37,557 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:20:37,607 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:21:40,290 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:22:07,515 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:22:08,517 - video_editor - INFO - 开始渲染视频到: output/video_4_1738822928_6031.mp4
+2025-02-06 14:22:08,518 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:22:08,518 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:22:08,564 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:23:10,323 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:24:00,621 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:24:01,861 - video_editor - INFO - 开始渲染视频到: output/video_2_1738823041_2713.mp4
+2025-02-06 14:24:01,861 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:24:01,861 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:24:01,917 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:25:04,672 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:26:03,877 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:26:05,107 - video_editor - INFO - 开始渲染视频到: output/video_3_1738823165_9922.mp4
+2025-02-06 14:26:05,108 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:26:05,108 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:26:05,166 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:27:06,713 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:30:36,074 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:30:37,391 - video_editor - INFO - 开始渲染视频到: output/video_2_1738823437_1663.mp4
+2025-02-06 14:30:37,391 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:30:37,391 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:30:37,447 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:31:41,043 - video_editor - INFO - 视频渲染完成
+2025-02-06 14:33:28,164 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-06 14:33:29,152 - video_editor - INFO - 开始渲染视频到: output/video_2_1738823609_4641.mp4
+2025-02-06 14:33:29,152 - video_editor - DEBUG - 计算的视频总时长: 9.3秒
+2025-02-06 14:33:29,152 - video_editor - INFO - 使用原始视频时长
+2025-02-06 14:33:29,196 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-06 14:34:33,802 - video_editor - INFO - 视频渲染完成

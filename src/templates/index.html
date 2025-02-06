@@ -85,21 +85,20 @@
         <h1>视频文字编辑器</h1>
         <form id="videoForm" action="/process" method="post">
             <div class="form-group">
-                <label for="typewriter_text">打字机效果文字</label>
-                <input type="text" id="typewriter_text" name="typewriter_text" required>
-                <div class="note">这段文字将以打字机效果显示在视频顶部</div>
+                <label for="shop_name">店名</label>
+                <input type="text" id="shop_name" name="shop_name" maxlength="15" required value="小谷姐姐麻辣烫">
             </div>
             <div class="form-group">
-                <label for="static_text1">静态文字 1</label>
-                <input type="text" id="static_text1" name="static_text1" required>
+                <label for="left_comment">左侧评论</label>
+                <input type="text" id="left_comment" name="left_comment" maxlength="120" required value="黄牛用黑科技就是抢票软件一到点垄断，除非你是黑客高手。要么就是从黄牛党买票。要么你挂国际部的号。感觉这里面有文章，你仔细想……">
             </div>
             <div class="form-group">
-                <label for="static_text2">静态文字 2</label>
-                <input type="text" id="static_text2" name="static_text2" required>
+                <label for="right_comment">右侧评论</label>
+                <input type="text" id="right_comment" name="right_comment" maxlength="12" required value="挂号难挂不上就算了不上">
             </div>
             <div class="form-group">
-                <label for="static_text3">静态文字 3</label>
-                <input type="text" id="static_text3" name="static_text3" required>
+                <label for="bottom_comment">底部评论</label>
+                <input type="text" id="bottom_comment" name="bottom_comment" maxlength="100" required value="朋友们！！！ 听取了一些建议 我约上了！！">
             </div>
             <div class="form-group">
                 <label for="template_id">选择视频模板</label>
@@ -119,10 +118,12 @@
         </div>
     </div>
     <script>
-        // 页面加载时获取视频模板列表
-        fetch('/templates')
-            .then(response => response.json())
-            .then(templates => {
+        // 页面加载时获取视频模板列表和当前合成次数
+        Promise.all([
+            fetch('/templates').then(response => response.json()),
+            fetch('/get_count').then(response => response.json())
+        ])
+            .then(([templates, countData]) => {
                 const select = document.getElementById('template_id');
                 templates.forEach(template => {
                     const option = document.createElement('option');
@@ -130,6 +131,10 @@
                     option.textContent = template.name;
                     select.appendChild(option);
                 });
+                
+                // 更新合成次数显示
+                const renderCountSpan = document.getElementById('renderCount');
+                renderCountSpan.textContent = countData.count;
             })
             .catch(error => console.error('Error:', error));
     
@@ -140,20 +145,32 @@
             const loadingDiv = document.getElementById('loading');
             const resultDiv = document.getElementById('result');
             
+            // 获取当前合成次数
+            const renderCountSpan = document.getElementById('renderCount');
+            const currentCount = parseInt(renderCountSpan.textContent) || 0;
+            renderCountSpan.textContent = currentCount + 1;
+            
             // 显示加载动画，隐藏其他元素
             submitBtn.disabled = true;
             loadingDiv.style.display = 'block';
             resultDiv.style.display = 'none';
-            // 在加载状态下不隐藏计数器
             
             fetch('/process', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    // 如果请求失败，恢复原来的计数
+                    renderCountSpan.textContent = currentCount;
+                    return response.json().then(data => {
+                        throw new Error(data.error || '生成视频时出错，请重试');
+                    });
+                }
+                return response.json();
+            })
             .then(data => {
                 const downloadDiv = document.getElementById('downloadLink');
-                const renderCountSpan = document.getElementById('renderCount');
                 
                 downloadDiv.innerHTML = `<a href="${data.video_url}" class="button">下载生成的视频</a>`;
                 renderCountSpan.textContent = data.render_count;
@@ -165,7 +182,7 @@
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('生成视频时出错，请重试');
+                alert(error.message);
                 loadingDiv.style.display = 'none';
                 submitBtn.disabled = false;
             });
