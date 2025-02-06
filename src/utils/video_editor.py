@@ -244,18 +244,34 @@ class VideoEditor:
             
             # 设置优化参数
             self.logger.info("开始写入视频文件，使用优化参数")
-            final_video.write_videofile(
-                output_path,
-                codec='h264_nvenc' if self._has_cuda() else 'libx264',  # 优先使用NVIDIA GPU编码
-                audio_codec='aac',
-                preset='p1' if self._has_cuda() else 'veryfast',  # NVENC预设或CPU预设
-                threads=12,      # 增加线程数以提升性能
-                bitrate='2000k',  # 保持适中的比特率
-                fps=30,         # 设置固定帧率
-                write_logfile=False,  # 关闭日志文件写入
-                temp_audiofile=False,  # 禁用临时音频文件
-                remove_temp=True   # 及时删除临时文件
-            )
+            max_retries = 3
+            retry_count = 0
+            
+            while retry_count < max_retries:
+                try:
+                    final_video.write_videofile(
+                        output_path,
+                        codec='libx264',  # 使用更稳定的CPU编码
+                        audio_codec='aac',
+                        preset='ultrafast',  # 使用最快的预设以减少内存使用
+                        threads=4,      # 减少线程数以降低资源竞争
+                        bitrate='2000k',
+                        fps=30,
+                        write_logfile=True,  # 启用日志以便调试
+                        temp_audiofile=True,  # 启用临时音频文件以提高稳定性
+                        remove_temp=True,
+                        ffmpeg_params=[
+                            '-max_muxing_queue_size', '1024',  # 增加队列大小
+                            '-bufsize', '2000k'  # 增加缓冲区大小
+                        ]
+                    )
+                    break  # 如果成功则退出循环
+                except IOError as e:
+                    retry_count += 1
+                    self.logger.warning(f"渲染失败，正在进行第{retry_count}次重试: {str(e)}")
+                    if retry_count >= max_retries:
+                        raise  # 如果重试次数用完则抛出异常
+                    time.sleep(1)  # 等待1秒后重试
             final_video.close()
             self.video.close()
             self.audio.close()
