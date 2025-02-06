@@ -2,7 +2,11 @@ version: '3.8'
 
 services:
   video-editor:
-    build: .
+    build: 
+      context: .
+      args:
+        - HTTP_PROXY=${HTTP_PROXY}
+        - HTTPS_PROXY=${HTTPS_PROXY}
     ports:
       - "5000:5000"
     volumes:
@@ -12,4 +16,6 @@ services:
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=production
+      - HTTP_PROXY=${HTTP_PROXY}
+      - HTTPS_PROXY=${HTTPS_PROXY}
     restart: unless-stopped
