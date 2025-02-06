@@ -26,8 +26,8 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
         with:
-          context: ./  # Dockerfile目录
-          file: Dockerfile  # Dockerfile路径
+          context: ./  #Dockerfile目录
+          file: Dockerfile  #Dockerfile路径
           push: true
           tags: catchoco/video_demo:v1.0
           platforms: linux/amd64

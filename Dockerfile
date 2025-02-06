@@ -4,6 +4,12 @@ FROM python:3.11-slim
 # 设置工作目录
 WORKDIR /app
 
+# 替换为国内镜像源
+RUN echo "deb https://mirrors.aliyun.com/debian/ bookworm main non-free non-free-firmware contrib" > /etc/apt/sources.list && \
+    echo "deb https://mirrors.aliyun.com/debian/ bookworm-updates main non-free non-free-firmware contrib" >> /etc/apt/sources.list && \
+    echo "deb https://mirrors.aliyun.com/debian/ bookworm-backports main non-free non-free-firmware contrib" >> /etc/apt/sources.list && \
+    echo "deb https://mirrors.aliyun.com/debian-security bookworm-security main non-free non-free-firmware contrib" >> /etc/apt/sources.list
+
 # 安装系统依赖和字体
 RUN apt-get update && apt-get install -y \
     ffmpeg \
