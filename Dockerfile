@@ -18,12 +18,12 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # 创建必要的目录
-RUN mkdir -p asset/video asset/audio asset/font asset/images output src/data
+RUN mkdir -p asset/video asset/audio asset/font asset/images output src/data src/log
 
 # 设置目录权限
 RUN chown -R www-data:www-data /app && \
     chmod -R 755 /app && \
-    chmod -R 777 /app/output /app/src/data
+    chmod -R 777 /app/output /app/src/data /app/src/log
 
 # 复制项目文件
 COPY . .
