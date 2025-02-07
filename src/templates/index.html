@@ -26,12 +26,21 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        input[type="text"], textarea {
+        input[type="text"] {
             width: 100%;
             padding: 8px;
             border: 1px solid #ddd;
             border-radius: 4px;
             box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+            min-height: 60px;
         }
         button {
             background-color: #4CAF50;
@@ -86,19 +95,19 @@
         <form id="videoForm" action="/process" method="post">
             <div class="form-group">
                 <label for="shop_name">店名</label>
-                <input type="text" id="shop_name" name="shop_name" maxlength="15" required value="小谷姐姐麻辣烫">
+                <input type="text" id="shop_name" name="shop_name" maxlength="15" required value="小谷姐姐麻辣烫" placeholder="请输入店铺名称">
             </div>
             <div class="form-group">
                 <label for="left_comment">左侧评论</label>
-                <input type="text" id="left_comment" name="left_comment" maxlength="120" required value="黄牛用黑科技就是抢票软件一到点垄断，除非你是黑客高手。要么就是从黄牛党买票。要么你挂国际部的号。感觉这里面有文章，你仔细想……">
+                <textarea id="left_comment" name="left_comment" maxlength="120" placeholder="请输入左侧评论" required>这次在美团上订餐真的很方便！我选择了附近的一家餐厅，餐品的选择非常丰富，页面也很清晰，搜索起来很顺畅。下单后不到半小时，外卖就准时送到了，包装也很细心，食物保持温热，味道超级棒！特别喜欢他们的炒饭，口感很正宗，分量也很足，吃了一顿过瘾。</textarea>
             </div>
             <div class="form-group">
                 <label for="right_comment">右侧评论</label>
-                <input type="text" id="right_comment" name="right_comment" maxlength="12" required value="挂号难挂不上就算了不上">
+                <textarea id="right_comment" name="right_comment" maxlength="12" required  placeholder="请输入右侧评论">强烈推荐给大家</textarea>
             </div>
             <div class="form-group">
                 <label for="bottom_comment">底部评论</label>
-                <input type="text" id="bottom_comment" name="bottom_comment" maxlength="100" required value="朋友们！！！ 听取了一些建议 我约上了！！">
+                <textarea id="bottom_comment" name="bottom_comment" maxlength="100" required  placeholder="请输入底部评论">祝你在工作中事事顺心，步步高升，事业有成，成就非凡！</textarea>
             </div>
             <div class="form-group">
                 <label for="template_id">选择视频模板</label>
