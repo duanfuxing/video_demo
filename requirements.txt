@@ -3,3 +3,4 @@ Pillow==10.1.0
 moviepy==1.0.3
 flask==3.0.0
 numpy==1.26.2
+schedule==1.2.0

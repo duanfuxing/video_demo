@@ -262,8 +262,7 @@ class VideoEditor:
                 remove_temp=True   # 及时删除临时文件
             )
             final_video.close()
-            self.video.close()
-            self.audio.close()
+            self.cleanup()
             self.logger.info("视频渲染完成")
         except Exception as e:
             self.logger.error(f"渲染视频时出错: {str(e)}")
