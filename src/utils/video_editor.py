@@ -214,6 +214,28 @@ class VideoEditor:
         img_clip = img_clip.set_position(actual_position).set_start(start_time).set_end(end_time)
         self.overlays.append(img_clip)
 
+    def cleanup(self):
+        """清理所有视频相关资源"""
+        try:
+            # 清理叠加层
+            for clip in self.overlays:
+                if hasattr(clip, 'close'):
+                    clip.close()
+            self.overlays.clear()
+            
+            # 清理视频和音频
+            if hasattr(self, 'video'):
+                self.video.close()
+            if hasattr(self, 'audio'):
+                self.audio.close()
+                
+            # 手动触发垃圾回收
+            import gc
+            gc.collect()
+            
+        except Exception as e:
+            self.logger.error(f"清理资源时出错: {str(e)}")
+
     def render(self, output_path):
         """渲染并保存视频"""
         try:
@@ -251,18 +273,18 @@ class VideoEditor:
             self.logger.info("开始写入视频文件，使用优化参数")
             final_video.write_videofile(
                 output_path,
-                codec='h264_nvenc' if self._has_cuda() else 'libx264',  # 优先使用NVIDIA GPU编码
+                codec='h264_nvenc' if self._has_cuda() else 'libx264',
                 audio_codec='aac',
-                preset='p1' if self._has_cuda() else 'veryfast',  # NVENC预设或CPU预设
-                threads=12,      # 增加线程数以提升性能
-                bitrate='2000k',  # 保持适中的比特率
-                fps=30,         # 设置固定帧率
-                write_logfile=False,  # 关闭日志文件写入
-                temp_audiofile=False,  # 禁用临时音频文件
-                remove_temp=True   # 及时删除临时文件
+                preset='p1' if self._has_cuda() else 'veryfast',
+                threads=12,
+                bitrate='2000k',
+                fps=30,
+                write_logfile=False,
+                temp_audiofile=False,
+                remove_temp=True
             )
             final_video.close()
-            self.cleanup()
+            self.cleanup()  # 确保在渲染后调用清理方法
             self.logger.info("视频渲染完成")
         except Exception as e:
             self.logger.error(f"渲染视频时出错: {str(e)}")
