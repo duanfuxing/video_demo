@@ -5,6 +5,7 @@ import os
 import time
 import random
 import glob
+import gc  # 添加 gc 模块导入
 
 app = Flask(__name__, template_folder='src/templates')
 render_count_service = RenderCountService()
@@ -146,12 +147,13 @@ def process():
         new_count = render_count_service.increment_count()
         
         # 渲染并保存视频
-        editor.render(output_path)
+        timestamp = int(time.time())
+        random_num = random.randint(1000, 9999)
+        output_filename = f'video_{template_id}_{timestamp}_{random_num}.mp4'
+        output_path = os.path.join('output', output_filename)
+        os.makedirs('output', exist_ok=True)
         
-        # 添加：手动触发垃圾回收
-        editor.cleanup()
-        import gc
-        gc.collect()
+        editor.render(output_path)
         
         # 返回视频文件和合成次数
         response = {
@@ -159,12 +161,13 @@ def process():
             'video_url': f'/download/{output_filename}'
         }
         return jsonify(response)
+        
     except Exception as e:
         # 出错时也要清理资源
         if 'editor' in locals():
             editor.cleanup()
         gc.collect()
-        raise
+        return jsonify({'error': str(e)}), 400
 
 @app.route('/get_count')
 def get_count():
