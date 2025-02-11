@@ -1,0 +1,67 @@
+2025-02-09 16:23:44,168 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:23:57,095 - video_editor - INFO - 开始渲染视频到: output/video_1_1739089437_3997.mp4
+2025-02-09 16:23:57,095 - video_editor - DEBUG - 计算的视频总时长: 31.799999999999997秒
+2025-02-09 16:23:57,096 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:23:57,157 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:24:00,389 - video_editor - ERROR - 渲染视频时出错: Error in file asset/audio/1.mp3, Accessing time t=7.16-7.20 seconds, with clip duration=7 seconds, 
+2025-02-09 16:28:13,536 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:28:22,365 - video_editor - INFO - 开始渲染视频到: output/video_1_1739089702_5776.mp4
+2025-02-09 16:28:22,365 - video_editor - DEBUG - 计算的视频总时长: 23.4秒
+2025-02-09 16:28:22,365 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:28:22,365 - video_editor - ERROR - 渲染视频时出错: 'AudioFileClip' object has no attribute 'loop'
+2025-02-09 16:29:10,102 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:29:18,928 - video_editor - INFO - 开始渲染视频到: output/video_1_1739089758_4038.mp4
+2025-02-09 16:29:18,929 - video_editor - DEBUG - 计算的视频总时长: 23.4秒
+2025-02-09 16:29:18,929 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:29:18,929 - video_editor - ERROR - 渲染视频时出错: name 'concatenate_audioclips' is not defined
+2025-02-09 16:29:57,933 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:30:06,755 - video_editor - INFO - 开始渲染视频到: output/video_1_1739089806_2307.mp4
+2025-02-09 16:30:06,755 - video_editor - DEBUG - 计算的视频总时长: 23.4秒
+2025-02-09 16:30:06,755 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:30:06,880 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:35:19,520 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:35:28,106 - video_editor - INFO - 开始渲染视频到: output/video_1_1739090128_1687.mp4
+2025-02-09 16:35:28,107 - video_editor - DEBUG - 计算的视频总时长: 23.099999999999998秒
+2025-02-09 16:35:28,107 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:35:28,166 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:39:57,105 - video_editor - INFO - 视频渲染完成
+2025-02-09 16:44:12,378 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:44:17,395 - video_editor - INFO - 开始渲染视频到: output/video_3_1739090657_8879.mp4
+2025-02-09 16:44:17,395 - video_editor - DEBUG - 计算的视频总时长: 18.6秒
+2025-02-09 16:44:17,396 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:44:17,456 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:44:19,060 - video_editor - ERROR - 渲染视频时出错: VideoClip.write_videofile() got an unexpected keyword argument 'buffer_size'
+2025-02-09 16:45:45,138 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:45:56,118 - video_editor - INFO - 开始渲染视频到: output/video_3_1739090756_1664.mp4
+2025-02-09 16:45:56,118 - video_editor - DEBUG - 计算的视频总时长: 25.2秒
+2025-02-09 16:45:56,118 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:45:56,181 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:50:41,055 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:50:44,787 - video_editor - INFO - 开始渲染视频到: output/video_1_1739091044_8874.mp4
+2025-02-09 16:50:44,787 - video_editor - DEBUG - 计算的视频总时长: 15.6秒
+2025-02-09 16:50:44,788 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:50:44,846 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:53:43,295 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 16:53:46,022 - video_editor - INFO - 开始渲染视频到: output/video_4_1739091226_2061.mp4
+2025-02-09 16:53:46,022 - video_editor - DEBUG - 计算的视频总时长: 13.5秒
+2025-02-09 16:53:46,022 - video_editor - INFO - 使用原始视频时长
+2025-02-09 16:53:46,082 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 16:55:25,961 - video_editor - INFO - 视频渲染完成
+2025-02-09 17:19:31,801 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 17:19:36,128 - video_editor - INFO - 开始渲染视频到: output/video_3_1739092776_9985.mp4
+2025-02-09 17:19:36,128 - video_editor - DEBUG - 计算的视频总时长: 16.5秒
+2025-02-09 17:19:36,128 - video_editor - INFO - 使用原始视频时长
+2025-02-09 17:19:36,187 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 17:21:39,879 - video_editor - INFO - 视频渲染完成
+2025-02-09 17:25:23,705 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 17:25:27,200 - video_editor - INFO - 开始渲染视频到: output/video_2_1739093127_4059.mp4
+2025-02-09 17:25:27,200 - video_editor - DEBUG - 计算的视频总时长: 16.5秒
+2025-02-09 17:25:27,200 - video_editor - INFO - 使用原始视频时长
+2025-02-09 17:25:27,264 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 17:27:38,295 - video_editor - INFO - 视频渲染完成
+2025-02-09 17:28:56,301 - video_editor - INFO - 从asset/video中随机选择视频文件
+2025-02-09 17:29:00,829 - video_editor - INFO - 开始渲染视频到: output/video_2_1739093340_7121.mp4
+2025-02-09 17:29:00,829 - video_editor - DEBUG - 计算的视频总时长: 18.9秒
+2025-02-09 17:29:00,829 - video_editor - INFO - 使用原始视频时长
+2025-02-09 17:29:00,890 - video_editor - INFO - 开始写入视频文件，使用优化参数
+2025-02-09 17:31:42,712 - video_editor - INFO - 视频渲染完成

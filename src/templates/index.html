@@ -118,6 +118,7 @@
             <button type="submit" id="submitBtn">生成视频</button>
         </form>
         <div class="counter">已合成视频次数：<span id="renderCount">0</span></div>
+        <div class="counter">已下载视频次数：<span id="downloadCount">0</span></div>
         <div class="loading" id="loading">
             <div class="loading-spinner"></div>
             <p>视频生成中，请稍候...</p>
@@ -130,9 +131,10 @@
         // 页面加载时获取视频模板列表和当前合成次数
         Promise.all([
             fetch('/templates').then(response => response.json()),
-            fetch('/get_count').then(response => response.json())
+            fetch('/get_count').then(response => response.json()),
+            fetch('/get_download_count').then(response => response.json())
         ])
-            .then(([templates, countData]) => {
+            .then(([templates, countData, downloadCountData]) => {
                 const select = document.getElementById('template_id');
                 templates.forEach(template => {
                     const option = document.createElement('option');
@@ -144,6 +146,10 @@
                 // 更新合成次数显示
                 const renderCountSpan = document.getElementById('renderCount');
                 renderCountSpan.textContent = countData.count;
+
+                // 更新下载次数显示
+                const downloadCountSpan = document.getElementById('downloadCount');
+                downloadCountSpan.textContent = downloadCountData.count;
             })
             .catch(error => console.error('Error:', error));
     
@@ -181,7 +187,7 @@
             .then(data => {
                 const downloadDiv = document.getElementById('downloadLink');
                 
-                downloadDiv.innerHTML = `<a href="${data.video_url}" class="button">下载生成的视频</a>`;
+                downloadDiv.innerHTML = `<a href="${data.video_url}" class="button" onclick="handleDownload(event, this.href)">下载生成的视频</a>`;
                 renderCountSpan.textContent = data.render_count;
                 
                 // 隐藏加载动画，显示结果
@@ -196,6 +202,23 @@
                 submitBtn.disabled = false;
             });
         };
+
+        // 处理下载事件
+        function handleDownload(event, url) {
+            event.preventDefault();
+            fetch(url)
+                .then(response => {
+                    const downloadCount = response.headers.get('X-Download-Count');
+                    if (downloadCount) {
+                        document.getElementById('downloadCount').textContent = downloadCount;
+                    }
+                    window.location.href = url;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    window.location.href = url;
+                });
+        }
     </script>
 </body>
 </html>
