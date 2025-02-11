@@ -29,8 +29,8 @@ def process():
         template_id = request.form["template_id"]
 
         # 验证输入文字长度
-        if len(shop_name) > 15:
-            return jsonify({"error": "店名不能超过15个字符"}), 400
+        if len(shop_name) > 20:
+            return jsonify({"error": "店名不能超过20个字符"}), 400
         if len(left_comment) > 120:
             return jsonify({"error": "左侧评论不能超过120个字符"}), 400
         if len(right_comment) > 12:
