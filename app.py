@@ -95,13 +95,20 @@ def process():
         )
 
         # 添加底部评论文字
-        # 处理底部评论的自动换行
+        # 处理底部评论的手动换行和自动换行
         chars_per_line = 31
-        bottom_comment_lines = [
-            bottom_comment[i : i + chars_per_line]
-            for i in range(0, len(bottom_comment), chars_per_line)
-        ]
-        bottom_comment = "\n".join(bottom_comment_lines)
+        lines = bottom_comment.split("\n")  # 先按用户手动换行分割
+        formatted_lines = []
+
+        # 处理每一行，如果超过最大长度则自动换行
+        for line in lines:
+            while len(line) > chars_per_line:
+                formatted_lines.append(line[:chars_per_line])
+                line = line[chars_per_line:]
+            if line:  # 添加剩余的文字
+                formatted_lines.append(line)
+
+        bottom_comment = "\n".join(formatted_lines)
         editor.add_text(
             bottom_comment,
             position=(60, 1080),
@@ -109,9 +116,9 @@ def process():
             color="black",
             typewriter_effect=True,
             typing_speed=typing_speed,
-            start_time=0.1,  # 延迟1秒开始显示打字机效果
+            start_time=0.1,
             end_time=video_duration,
-        )  # 修改为视频总时长
+        )
         # 添加底部好外卖名称
         editor.add_text(
             "——好外卖分部",
@@ -263,4 +270,4 @@ def download_video(filename):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5004)

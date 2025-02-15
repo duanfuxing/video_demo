@@ -184,11 +184,19 @@ class VideoEditor:
         # 处理左侧评论和底部评论的自动换行（y坐标为410或1080时）
         if isinstance(position, tuple) and position[1] in [410, 1080]:
             chars_per_line = 16 if position[1] == 410 else 31
-            text_lines = [
-                text[i : i + chars_per_line]
-                for i in range(0, len(text), chars_per_line)
-            ]
-            text = "\n".join(text_lines)
+            # 先处理用户手动换行
+            lines = text.split("\n")
+            formatted_lines = []
+
+            # 处理每一行，如果超过最大长度则自动换行
+            for line in lines:
+                while len(line) > chars_per_line:
+                    formatted_lines.append(line[:chars_per_line])
+                    line = line[chars_per_line:]
+                if line:  # 添加剩余的文字
+                    formatted_lines.append(line)
+
+            text = "\n".join(formatted_lines)
 
         # 创建文字图片
         text_image = self.create_text_image(

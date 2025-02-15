@@ -40,7 +40,8 @@
             border-radius: 4px;
             box-sizing: border-box;
             resize: vertical;
-            min-height: 60px;
+            min-height: 100px; /* 增加默认高度 */
+            white-space: pre-wrap; /* 保留换行符 */
         }
         button {
             background-color: #4CAF50;
@@ -107,7 +108,8 @@
             </div>
             <div class="form-group">
                 <label for="bottom_comment">底部评论</label>
-                <textarea id="bottom_comment" name="bottom_comment" maxlength="100" required  placeholder="请输入底部评论">祝你在工作中事事顺心，步步高升，事业有成，成就非凡！</textarea>
+                <textarea id="bottom_comment" name="bottom_comment" maxlength="100" required placeholder="请输入底部评论">祝你在工作中事事顺心，步步高升，事业有成，成就非凡！</textarea>
+                <div class="note">提示：可以使用回车换行，最多支持3行文字</div>
             </div>
             <div class="form-group">
                 <label for="template_id">选择视频模板</label>
@@ -219,6 +221,22 @@
                     window.location.href = url;
                 });
         }
+
+        // 添加底部评论换行控制
+        document.getElementById('bottom_comment').addEventListener('input', function(e) {
+            const lines = e.target.value.split('\n');
+            if (lines.length > 3) {
+                // 只保留前三行
+                e.target.value = lines.slice(0, 3).join('\n');
+            }
+        });
+
+        document.getElementById('bottom_comment').addEventListener('keydown', function(e) {
+            const lines = e.target.value.split('\n');
+            if (e.key === 'Enter' && lines.length >= 3) {
+                e.preventDefault(); // 阻止第四次换行
+            }
+        });
     </script>
 </body>
 </html>
